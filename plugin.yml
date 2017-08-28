@@ -1,0 +1,9 @@
+name: Example_Entity
+version: 1.2.7
+main: com.stageroad0820.Example_Entity.Main
+
+commands:
+  blog:
+    description: Main Command 1
+  example:
+    description: Main Command 2
