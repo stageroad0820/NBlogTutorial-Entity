@@ -21,7 +21,7 @@ public class Event_EntityByEntity implements Listener {
 		Event_EntityByEntity.example = plugin;
 	}
 
-	// ChatColor °£·«È­
+	// ChatColor ê°„ëµí™”
 	String aqua = ChatColor.AQUA + "";
 	String black = ChatColor.BLACK + "";
 	String blue = ChatColor.BLUE + "";
@@ -46,7 +46,7 @@ public class Event_EntityByEntity implements Listener {
 	String strth = ChatColor.STRIKETHROUGH + "";
 	String under = ChatColor.UNDERLINE + "";
 
-	// ¸¹ÀÌ ¾²ÀÌ´Â String °ª Á¤¸®
+	// ë§ì´ ì“°ì´ëŠ” String ê°’ ì •ë¦¬
 	String prefix = ChatColor.AQUA + "[TUT] " + ChatColor.WHITE + "";
 	String info = ChatColor.YELLOW + "[Info] " + ChatColor.WHITE + "";
 	String error = ChatColor.DARK_RED + "[Error] " + ChatColor.RED + "";
@@ -64,8 +64,8 @@ public class Event_EntityByEntity implements Listener {
 			String victim = entity.getName();
 			String attacker = damager.getName();
 			
-			damager.sendMessage(prefix + yellow + victim + white + " (ÀÌ)°¡ " + yellow + attacker + white + " ¿¡°Ô " 
-					+ red + dm_take + white + " ¸¸Å­ÀÇ µ¥¹ÌÁö¸¦ ÀÔ¾ú½À´Ï´Ù!");
+			damager.sendMessage(prefix + yellow + victim + white + " (ì´)ê°€ " + yellow + attacker + white + " ì—ê²Œ " 
+					+ red + dm_take + white + " ë§Œí¼ì˜ ë°ë¯¸ì§€ë¥¼ ì…ì—ˆìŠµë‹ˆë‹¤!");
 		}
 		else if (damager instanceof Arrow) {
 			Arrow arrow = (Arrow) damager;
@@ -74,8 +74,8 @@ public class Event_EntityByEntity implements Listener {
 			String victim = entity.getName();
 			String attacker = shooter.getName();
 			
-			shooter.sendMessage(prefix + yellow + attacker + white + " (ÀÌ)°¡ " + yellow + victim + white + " ¿¡°Ô "
-					+ red + dm_give + white + " ¸¸Å­ÀÇ µ¥¹ÌÁö¸¦ ÁÖ¾ú½À´Ï´Ù!");
+			shooter.sendMessage(prefix + yellow + attacker + white + " (ì´)ê°€ " + yellow + victim + white + " ì—ê²Œ "
+					+ red + dm_give + white + " ë§Œí¼ì˜ ë°ë¯¸ì§€ë¥¼ ì£¼ì—ˆìŠµë‹ˆë‹¤!");
 		}
 		else {
 			Player player = (Player) entity;
@@ -83,8 +83,8 @@ public class Event_EntityByEntity implements Listener {
 			String victim = entity.getName();
 			String attacker = damager.getName();
 			
-			player.sendMessage(prefix + yellow + attacker + white + " (ÀÌ)°¡ " + yellow + victim + white + " ¿¡°Ô "
-					+ red + dm_give + white + " ¸¸Å­ÀÇ µ¥¹ÌÁö¸¦ ÁÖ¾ú½À´Ï´Ù!");
+			player.sendMessage(prefix + yellow + attacker + white + " (ì´)ê°€ " + yellow + victim + white + " ì—ê²Œ "
+					+ red + dm_give + white + " ë§Œí¼ì˜ ë°ë¯¸ì§€ë¥¼ ì£¼ì—ˆìŠµë‹ˆë‹¤!");
 		}
 	}
 }

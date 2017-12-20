@@ -17,7 +17,7 @@ public class Main extends JavaPlugin {
 	PluginDescriptionFile pdfFile = this.getDescription();
 	PluginManager pm = Bukkit.getServer().getPluginManager();
 
-	// ChatColor °£·«È­
+	// ChatColor ê°„ëµí™”
 	String aqua = ChatColor.AQUA + "";
 	String black = ChatColor.BLACK + "";
 	String blue = ChatColor.BLUE + "";
@@ -42,7 +42,7 @@ public class Main extends JavaPlugin {
 	String strth = ChatColor.STRIKETHROUGH + "";
 	String under = ChatColor.UNDERLINE + "";
 
-	// ¸¹ÀÌ ¾²ÀÌ´Â String °ª Á¤¸®
+	// ë§ì´ ì“°ì´ëŠ” String ê°’ ì •ë¦¬
 	String prefix = ChatColor.AQUA + "[TUT] " + ChatColor.WHITE + "";
 	String info = ChatColor.YELLOW + "[Info] " + ChatColor.WHITE + "";
 	String error = ChatColor.DARK_RED + "[Error] " + ChatColor.RED + "";
@@ -56,19 +56,19 @@ public class Main extends JavaPlugin {
 	public void onEnable() {
 		getCommand("blog").setExecutor(new Commands(this));
 		getCommand("example").setExecutor(new Commands(this));
-		console(prefix + yellow + "/blog ¿Í /example " + white + " ¸í·É¾î°¡ µî·ÏµÇ¾ú½À´Ï´Ù.");
+		console(prefix + yellow + "/blog ì™€ /example " + white + " ëª…ë ¹ì–´ê°€ ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		
 		pm.registerEvents(new Event_EntityByEntity(this), this);
-		console(prefix + yellow + "EntityDamageByEntityEvent " + white + " ÀÌº¥Æ®°¡ µî·ÏµÇ¾ú½À´Ï´Ù.");
+		console(prefix + yellow + "EntityDamageByEntityEvent " + white + " ì´ë²¤íŠ¸ê°€ ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		
-		console(prefix + pname + " (ÀÌ)°¡ È°¼ºÈ­ µÇ¾ú½À´Ï´Ù!");
+		console(prefix + pname + " (ì´)ê°€ í™œì„±í™” ë˜ì—ˆìŠµë‹ˆë‹¤!");
 		super.onEnable();
 	}
 
 	@Override
 	public void onDisable() {
 
-		console(prefix + pname + " (ÀÌ)°¡ ºñÈ°¼ºÈ­ µÇ¾ú½À´Ï´Ù!");
+		console(prefix + pname + " (ì´)ê°€ ë¹„í™œì„±í™” ë˜ì—ˆìŠµë‹ˆë‹¤!");
 		super.onDisable();
 	}
 	

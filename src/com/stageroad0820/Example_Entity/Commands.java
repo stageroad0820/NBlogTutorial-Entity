@@ -19,7 +19,7 @@ public class Commands implements CommandExecutor {
 		Commands.main = plugin;
 	}
 
-	// ChatColor °£·«È­
+	// ChatColor ê°„ëµí™”
 	String aqua = ChatColor.AQUA + "";
 	String black = ChatColor.BLACK + "";
 	String blue = ChatColor.BLUE + "";
@@ -44,7 +44,7 @@ public class Commands implements CommandExecutor {
 	String strth = ChatColor.STRIKETHROUGH + "";
 	String under = ChatColor.UNDERLINE + "";
 
-	// ¸¹ÀÌ ¾²ÀÌ´Â String °ª Á¤¸®
+	// ë§ì´ ì“°ì´ëŠ” String ê°’ ì •ë¦¬
 	String prefix = ChatColor.AQUA + "[TUT] " + ChatColor.WHITE + "";
 	String info = ChatColor.YELLOW + "[Info] " + ChatColor.WHITE + "";
 	String error = ChatColor.DARK_RED + "[Error] " + ChatColor.RED + "";
@@ -59,48 +59,48 @@ public class Commands implements CommandExecutor {
 			
 			if(commandLabel.equalsIgnoreCase("example") || commandLabel.equalsIgnoreCase("blog")) {
 				if(args.length == 0) {
-					player.sendMessage(error + "ÀÎÀÚ °ªÀÌ ³Ê¹« Àû°Å³ª ¾ø½À´Ï´Ù! " + yellow + "/blog help" + red + " ¸¦ ÀÔ·ÂÇØ µµ¿ò¸»À» È®ÀÎÇÏ¼¼¿ä.");
+					player.sendMessage(error + "ì¸ì ê°’ì´ ë„ˆë¬´ ì ê±°ë‚˜ ì—†ìŠµë‹ˆë‹¤! " + yellow + "/blog help" + red + " ë¥¼ ì…ë ¥í•´ ë„ì›€ë§ì„ í™•ì¸í•˜ì„¸ìš”.");
 				}
 				else {
 					if(args[0].equalsIgnoreCase("help")) {
-						player.sendMessage(prefix + "Example ÇÃ·¯±×ÀÎÀÇ µµ¿ò¸»À» Ç¥½ÃÇÕ´Ï´Ù.");
-						player.sendMessage(green + "=-=-=-=-=-=-=-= Example µµ¿ò¸» =-=-=-=-=-=-=-=");
-						player.sendMessage(yellow + "< /example °ú /blog µÎ°³ÀÇ Ä¿¸Çµå·Î ¾Æ·¡ÀÇ Ä¿¸Çµå¸¦ ¶È°°ÀÌ ÀÌ¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù. > ");
-						player.sendMessage(green + "/blog help : µµ¿ò¸»À» Ç¥½ÃÇÕ´Ï´Ù.");
-						player.sendMessage(green + "/blog entity <entity> : ÇÃ·¹ÀÌ¾îÀÇ À§Ä¡¿¡ ÀÔ·ÂµÈ ¿£Æ¼Æ¼¸¦ ¼ÒÈ¯ÇÕ´Ï´Ù.");
-						player.sendMessage(green + "/blog detect : ÇÃ·¹ÀÌ¾î¸¦ ±âÁØÀ¸·Î ¸ğµç ¹æÇâ¿¡ ´ëÇØ 20ºí·Ï ³»¿¡ ÀÖ´Â ¸ğµç ¿£Æ¼Æ¼¸¦ °¨ÁöÇÏ¿© Ãâ·ÂÇÕ´Ï´Ù.");
+						player.sendMessage(prefix + "Example í”ŒëŸ¬ê·¸ì¸ì˜ ë„ì›€ë§ì„ í‘œì‹œí•©ë‹ˆë‹¤.");
+						player.sendMessage(green + "=-=-=-=-=-=-=-= Example ë„ì›€ë§ =-=-=-=-=-=-=-=");
+						player.sendMessage(yellow + "< /example ê³¼ /blog ë‘ê°œì˜ ì»¤ë§¨ë“œë¡œ ì•„ë˜ì˜ ì»¤ë§¨ë“œë¥¼ ë˜‘ê°™ì´ ì´ìš©í•  ìˆ˜ ìˆìŠµë‹ˆë‹¤. > ");
+						player.sendMessage(green + "/blog help : ë„ì›€ë§ì„ í‘œì‹œí•©ë‹ˆë‹¤.");
+						player.sendMessage(green + "/blog entity <entity> : í”Œë ˆì´ì–´ì˜ ìœ„ì¹˜ì— ì…ë ¥ëœ ì—”í‹°í‹°ë¥¼ ì†Œí™˜í•©ë‹ˆë‹¤.");
+						player.sendMessage(green + "/blog detect : í”Œë ˆì´ì–´ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ëª¨ë“  ë°©í–¥ì— ëŒ€í•´ 20ë¸”ë¡ ë‚´ì— ìˆëŠ” ëª¨ë“  ì—”í‹°í‹°ë¥¼ ê°ì§€í•˜ì—¬ ì¶œë ¥í•©ë‹ˆë‹¤.");
 						player.sendMessage(green + "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 					}
 					
 					else if(args[0].equalsIgnoreCase("entity")) {
 						if(args.length == 1) {
-							player.sendMessage(error + "¿£Æ¼Æ¼¸¦ ¼ÒÈ¯ÇÏ±â À§ÇØ¼­´Â " + yellow + "/blog entity <entity>" 
-									+ red + " ÀÇ ±ÔÄ¢À» ÁöÄÑ¼­ ¸í·É¾î¸¦ ÀÔ·ÂÇØ¾ß ÇÕ´Ï´Ù.");
-							player.sendMessage(error + "¼ÒÈ¯ °¡´ÉÇÑ ¿£Æ¼Æ¼ ¸ñ·Ï: " 
-									+ yellow + "´Á´ë(wolf), ¿À¼¿·Ô(ocelot), ÁÖ¹Î(villager), °©¿Ê °ÅÄ¡´ë(armor_stand)");
+							player.sendMessage(error + "ì—”í‹°í‹°ë¥¼ ì†Œí™˜í•˜ê¸° ìœ„í•´ì„œëŠ” " + yellow + "/blog entity <entity>" 
+									+ red + " ì˜ ê·œì¹™ì„ ì§€ì¼œì„œ ëª…ë ¹ì–´ë¥¼ ì…ë ¥í•´ì•¼ í•©ë‹ˆë‹¤.");
+							player.sendMessage(error + "ì†Œí™˜ ê°€ëŠ¥í•œ ì—”í‹°í‹° ëª©ë¡: " 
+									+ yellow + "ëŠ‘ëŒ€(wolf), ì˜¤ì…€ë¡¯(ocelot), ì£¼ë¯¼(villager), ê°‘ì˜· ê±°ì¹˜ëŒ€(armor_stand)");
 						}
 						else {
 							if(args[1].equalsIgnoreCase("wolf")) {
 								player.getWorld().spawnEntity(loc, EntityType.WOLF);
-								player.sendMessage(prefix + "ÇÃ·¹ÀÌ¾î°¡ ¼­ ÀÖ´Â À§Ä¡¿¡ ¿£Æ¼Æ¼ '´Á´ë' ¸¦ ¼ÒÈ¯ÇÏ¿´½À´Ï´Ù.");
+								player.sendMessage(prefix + "í”Œë ˆì´ì–´ê°€ ì„œ ìˆëŠ” ìœ„ì¹˜ì— ì—”í‹°í‹° 'ëŠ‘ëŒ€' ë¥¼ ì†Œí™˜í•˜ì˜€ìŠµë‹ˆë‹¤.");
 							}
 							else if(args[1].equalsIgnoreCase("ocelot")) {
 								player.getWorld().spawnEntity(loc, EntityType.OCELOT);
-								player.sendMessage(prefix + "ÇÃ·¹ÀÌ¾î°¡ ¼­ ÀÖ´Â À§Ä¡¿¡ ¿£Æ¼Æ¼ '¿À¼¿·Ô' À» ¼ÒÈ¯ÇÏ¿´½À´Ï´Ù.");
+								player.sendMessage(prefix + "í”Œë ˆì´ì–´ê°€ ì„œ ìˆëŠ” ìœ„ì¹˜ì— ì—”í‹°í‹° 'ì˜¤ì…€ë¡¯' ì„ ì†Œí™˜í•˜ì˜€ìŠµë‹ˆë‹¤.");
 							}
 							else if(args[1].equalsIgnoreCase("villager")) {
 								player.getWorld().spawnEntity(loc, EntityType.VILLAGER);
-								player.sendMessage(prefix + "ÇÃ·¹ÀÌ¾î°¡ ¼­ ÀÖ´Â À§Ä¡¿¡ ¿£Æ¼Æ¼ 'ÁÖ¹Î' À» ¼ÒÈ¯ÇÏ¿´½À´Ï´Ù.");
+								player.sendMessage(prefix + "í”Œë ˆì´ì–´ê°€ ì„œ ìˆëŠ” ìœ„ì¹˜ì— ì—”í‹°í‹° 'ì£¼ë¯¼' ì„ ì†Œí™˜í•˜ì˜€ìŠµë‹ˆë‹¤.");
 							}
 							else if(args[1].equalsIgnoreCase("armor_stand")) {
 								player.getWorld().spawnEntity(loc, EntityType.ARMOR_STAND);
-								player.sendMessage(prefix + "ÇÃ·¹ÀÌ¾î°¡ ¼­ ÀÖ´Â À§Ä¡¿¡ ¿£Æ¼Æ¼ '°©¿Ê °ÅÄ¡´ë' ¸¦ ¼ÒÈ¯ÇÏ¿´½À´Ï´Ù.");
+								player.sendMessage(prefix + "í”Œë ˆì´ì–´ê°€ ì„œ ìˆëŠ” ìœ„ì¹˜ì— ì—”í‹°í‹° 'ê°‘ì˜· ê±°ì¹˜ëŒ€' ë¥¼ ì†Œí™˜í•˜ì˜€ìŠµë‹ˆë‹¤.");
 							}
 						}
 					}
 					
 					else if(args[0].equalsIgnoreCase("detect")) {
-						player.sendMessage(prefix + "ÇöÀç ÇÃ·¹ÀÌ¾î ±âÁØ ¸ğµç ¹æÇâ¿¡ ´ëÇØ 20ºí·Ï ³»¿¡ ÀÖ´Â ¿£Æ¼Æ¼ ¸ñ·Ï ÀÔ´Ï´Ù.");
+						player.sendMessage(prefix + "í˜„ì¬ í”Œë ˆì´ì–´ ê¸°ì¤€ ëª¨ë“  ë°©í–¥ì— ëŒ€í•´ 20ë¸”ë¡ ë‚´ì— ìˆëŠ” ì—”í‹°í‹° ëª©ë¡ ì…ë‹ˆë‹¤.");
 						
 						for(Entity entity : player.getNearbyEntities(20.0, 20.0, 20.0)) {
 							player.sendMessage((entity instanceof Player ? ((Player)entity).getName() : entity.getType().name()));
